@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        function formatarData(str) {
+            let partes = str.split('/').map(Number);
+            let data = new Date(partes[2], partes[1] - 1, partes[0]);
+            return data.toLocaleString([], {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+        let date = new Date();
+        let data = date.getDay() + '/' + date.getMonth() + '/' + date.getFullYear();
+        //console.log(formatarData(data));
+        let dataFormatada = formatarData(data);
+        document.write("<br>" + dataFormatada);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
