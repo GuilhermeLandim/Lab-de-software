@@ -31,5 +31,31 @@ function addItem() {
         document.getElementById("novoItem").value = "";
     }
 }
+
+let meuCarro = {};
+
+function calcValorMercado(valor){
+    
+}
+
+function meuCarroInfos() {
+    meuCarro.marca = document.getElementById("marca").value;
+    meuCarro.modelo = document.getElementById("modelo").value;
+    meuCarro.ano = document.getElementById("ano").value;
+    meuCarro.cor = document.getElementById("cor").value;
+    meuCarro.kilometragem = document.getElementById("kilometragem").value;
+    meuCarro.valor = document.getElementById("valor").value;
+    meuCarro.valorMercado = calcValorMercado(meuCarro.valor);
+    meuCarro.idade = function () {
+        let dataAtual = new Date();
+        return dataAtual.getFullYear() - meuCarro.ano;
+    }
+    
+}
+
+
+
+
+document.getElementById("salvar-carro").addEventListener("click", meuCarroInfos);
 document.getElementById("add-item").addEventListener("click", addItem);
 document.getElementById("palavra").addEventListener("change", verificarPalindromo);
