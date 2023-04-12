@@ -1,0 +1,14 @@
+.header{
+    background-color: rgb(197 224 255);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap:16px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+body{
+    margin: 0;
+}
